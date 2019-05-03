@@ -1,0 +1,16 @@
+<!doctype html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout}"
+>
+<body>
+  <section layout:fragment="content">
+    <h3 class="title">Login below</h3>
+    <small>
+      <a th:href="@{saml/login}">Start Login Process</a>
+    </small>
+  </section>
+<body>
+</html>
