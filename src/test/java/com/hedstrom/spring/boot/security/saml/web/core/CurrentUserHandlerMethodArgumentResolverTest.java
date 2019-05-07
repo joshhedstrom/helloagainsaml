@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -20,9 +21,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 import java.security.Principal;
 import java.util.Collections;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -62,7 +61,7 @@ public class CurrentUserHandlerMethodArgumentResolverTest extends CommonTestSupp
         ModelAndViewContainer mavContainer = mock(ModelAndViewContainer.class);
         WebDataBinderFactory binderFactory = mock(WebDataBinderFactory.class);
         NativeWebRequest webRequest = mock(NativeWebRequest.class);
-        User stubUser = new User(USER_NAME, "", Collections.emptyList());
+        User stubUser = new User(USER_NAME, "", Collections.<GrantedAuthority>emptyList());
         Principal stubPrincipal = new UsernamePasswordAuthenticationToken(stubUser, null);
         when(webRequest.getUserPrincipal()).thenReturn(stubPrincipal);
 
