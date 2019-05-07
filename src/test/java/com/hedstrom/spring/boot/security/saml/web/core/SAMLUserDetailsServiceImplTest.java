@@ -54,7 +54,7 @@ public class SAMLUserDetailsServiceImplTest extends CommonTestSupport {
         assertTrue(user.isAccountNonLocked());
         assertEquals(1, user.getAuthorities().size());
 
-        List<GrantedAuthority> authorities = new ArrayList<>(user.getAuthorities());
+        List<GrantedAuthority> authorities = new ArrayList(user.getAuthorities());
         Object authority = authorities.get(0);
 
         assertTrue(authority instanceof SimpleGrantedAuthority);
