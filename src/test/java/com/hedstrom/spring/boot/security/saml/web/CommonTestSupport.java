@@ -2,7 +2,6 @@ package com.hedstrom.spring.boot.security.saml.web;
 
 import org.springframework.mock.web.MockHttpSession;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -28,7 +27,7 @@ public class CommonTestSupport {
 
     public static final String ANONYMOUS_USER_PRINCIPAL = "UserPrincipal";
 
-    public static final List<GrantedAuthority> AUTHORITIES =
+    public static final List<SimpleGrantedAuthority> AUTHORITIES =
             Collections.singletonList(new SimpleGrantedAuthority(USER_ROLE));
 
     public static final User USER_DETAILS = new User(USER_NAME, USER_PASSWORD, AUTHORITIES);
