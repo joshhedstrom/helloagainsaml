@@ -33,7 +33,7 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standal
 @WebAppConfiguration
 public class SSOControllerTest extends CommonTestSupport {
 
-    private static final Set<String> IDPS = Collections.unmodifiableSet(new HashSet<>(Arrays.asList("idp1", "idp2", "idp3")));
+    private static final Set<String> IDPS = Collections.unmodifiableSet(new HashSet(Arrays.asList("idp1", "idp2", "idp3")));
 
     @InjectMocks
     SSOController ssoController;
