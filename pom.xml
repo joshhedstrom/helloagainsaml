@@ -12,6 +12,8 @@
 	<description>a saml hello world</description>
 	<properties>
 		<java.version>1.6</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<start-class>com.hedstrom.spring.boot.security.saml.web.Application</start-class>
