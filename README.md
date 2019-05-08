@@ -20,7 +20,7 @@ To get the app up and running, first update the certificate from SSO Circle
 $ cd src/main/resources/saml/ && ./update-certificate.sh && cd ../../../../
 ```
 
-The package up the app with Maven
+Then package up the app with Maven
 ```
 $ mvn clean package -e
 ```
@@ -33,7 +33,7 @@ $ java -jar target/helloagainsaml-2.0.1-SNAPSHOT.jar
 ## Built With
 
 * [Java 6](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html)
-* [Spring Boot(https://spring.io/projects/spring-boot)
+* [Spring Boot](https://spring.io/projects/spring-boot)
 * [Spring Security](https://spring.io/projects/spring-security)
 * [SAML 2.0](http://saml.xml.org/saml-specifications)
 * [Maven](https://maven.apache.org/)
