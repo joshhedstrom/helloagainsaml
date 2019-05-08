@@ -30,6 +30,8 @@ And then run the app
 $ java -jar target/helloagainsaml-2.0.1-SNAPSHOT.jar
 ```
 
+Finally, head to [http://localhost:8080/](http://localhost:8080/)
+
 ## Built With
 
 * [Java 6](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html)
